@@ -1,2 +1,69 @@
 
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiIl0sImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
+
+body {
+  background-image: url('../../resources/graphics/background.png');
+  background-repeat: repeat;
+}
+
+.container {
+  background-color: white!important;
+}
+
+.search-input-container {
+  background-color: #1C688E;
+}
+
+input.search {
+  background: white;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  width: 98%;
+  padding-left: 2%;
+}
+
+.col.s12.m4.l3 {
+  border-right: 1px solid lightgray;
+}
+
+.all-pad {
+  padding: 1.25rem!important;
+}
+
+.lr-pad {
+  padding: 0 1.25rem!important;
+}
+
+.half-lr-pad {
+  padding: 0 .6125rem!important;
+}
+
+.zero-stars i,
+.one-star i,
+.two-stars i,
+.three-stars i,
+.four-stars i,
+.five-stars i {
+  color: lightgray!important;
+}
+
+.one-star i:nth-child(-n+1) {
+  color: #FFAB66!important;
+}
+
+.two-stars i:nth-child(-n+2) {
+  color: #FFAB66!important;
+}
+
+.three-stars i:nth-child(-n+3) {
+  color: #FFAB66!important;
+}
+
+.four-stars i:nth-child(-n+4) {
+  color: #FFAB66!important;
+}
+
+.five-stars i:nth-child(-n+5) {
+  color: #FFAB66!important;
+}
