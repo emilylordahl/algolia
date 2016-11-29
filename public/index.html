@@ -22,11 +22,9 @@
         </div>
       </div>
       <div class="col s12 m4 l3">
-
         <div class="facet-nav all-pad">
           <p>Cuisine/Food Type</p>
-          <ul class="half-lr-pad cuisine-container">
-          </ul>
+          <ul class="half-lr-pad cuisine-container"></ul>
         </div>
         <div class="facet-nav all-pad">
           <p>Rating</p>
@@ -85,7 +83,6 @@
         <div class="stats all-pad no-bottom-pad"></div>
         <div class="hits all-pad no-top-pad"></div>
         <div id="pagination"></div>
-
       </div>
     </div>
   </div>
@@ -111,12 +108,13 @@
       </div>
       <div class="hit-content">
         <h3 class="hit-name">{{{ _highlightResult.name.value }}}</h3>
-        <span class="hit-review">{{ stars_count }}</span> <span class="hit-review-count">({{ reviews_count }})</span>
-        <span class="hit-food-type">{{ food_type }}</span> | <span class="hit-neighborhood">{{ neighborhood }}</span> | <span class="hit-price">{{ price }}</span>
+        <p><span class="hit-review">{{ stars_count }}</span> <span class="hit-review-count">({{ reviews_count }})</span><p>
+        <p><span class="hit-food-type">{{ food_type }}</span> | <span class="hit-neighborhood">{{ neighborhood }}</span> | <span class="hit-price">{{ price }}</span></p>
       </div>
     </div>
     {{/each}}
   </script>
+
   <!-- Stats -->
   <script type="text/x-handlebars-template" id="stats-template">
     <p>{{ nbHits }} result{{#if nbHits_plural}}s{{/if}} found in <span class="found-in">{{ processingTimeMS }}ms</span></p>
