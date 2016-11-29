@@ -5,9 +5,9 @@ var logger = require('morgan');
 
 // Algolia
 var algoliasearch = require('algoliasearch');
-var applicationID = process.env.ALGOLIA_APP_ID;
+var appID = process.env.ALGOLIA_APP_ID;
 var apiKey = process.env.ALGOLIA_API_KEY;
-var client = algoliasearch(applicationID, apiKey);
+var client = algoliasearch(appID, apiKey);
 var index = client.initIndex('restaurants');
 var restaurantsJSON = require('./resources/dataset/restaurants_list.json');
 
@@ -20,14 +20,17 @@ app.use(express.static(__dirname + '/public'));
 index.addObjects(restaurantsJSON, function(err, content){
   if (err) {
     console.error(err);
+  } else {
+    console.log(content);
   }
 });
 
-index.search('Pepper Pike', function searchDone(err, content) {
-  console.log(content);
-});
-
+index.setSettings({"attributesToIndex":["name", "price"]});
 
 app.listen(process.env.PORT || 3000, function(){
   console.log('Server running on port 3000...');
+});
+
+client.listIndexes(function(err, content) {
+  console.log(content);
 });
