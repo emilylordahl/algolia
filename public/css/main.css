@@ -1,36 +1,36 @@
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiIl0sImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
 
 body {
-    background-image: url('../graphics/background.png');
-    background-repeat: repeat;
-    font-weight: 300!important;
+  background-image: url('../graphics/background.png');
+  background-repeat: repeat;
+  font-weight: 300!important;
 }
 .container {
-    background-color: white!important;
-    margin-top: 2rem;
+  background-color: white!important;
+  margin-top: 2rem;
 }
 .search-input-container {
-    background-color: #1C688E;
+  background-color: #1C688E;
 }
 input.search {
-    background: white;
-    margin-bottom: 0;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-    width: 98%;
-    padding-left: 2%;
+  background: white;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  width: 98%;
+  padding-left: 2%;
 }
 .col.s12.m4.l3 {
-    border-right: 1px solid lightgray;
+  border-right: 1px solid lightgray;
 }
 .all-pad {
-    padding: 1.25rem!important;
+  padding: 1.25rem!important;
 }
 .lr-pad {
-    padding: 0 1.25rem!important;
+  padding: 0 1.25rem!important;
 }
 .half-lr-pad {
-    padding: 0 .6125rem!important;
+  padding: 0 .6125rem!important;
 }
 .no-bottom-pad {
   padding-bottom: 0!important;
@@ -41,22 +41,22 @@ input.search {
 }
 
 .zero-stars i, .one-star i, .two-stars i, .three-stars i, .four-stars i, .five-stars i {
-    color: lightgray!important;
+  color: lightgray!important;
 }
 .one-star i:nth-child(-n+1) {
-    color: #FFAB66!important;
+  color: #FFAB66!important;
 }
 .two-stars i:nth-child(-n+2) {
-    color: #FFAB66!important;
+  color: #FFAB66!important;
 }
 .three-stars i:nth-child(-n+3) {
-    color: #FFAB66!important;
+  color: #FFAB66!important;
 }
 .four-stars i:nth-child(-n+4) {
-    color: #FFAB66!important;
+  color: #FFAB66!important;
 }
 .five-stars i:nth-child(-n+5) {
-    color: #FFAB66!important;
+  color: #FFAB66!important;
 }
 
 .hit {
@@ -79,22 +79,22 @@ input.search {
 }
 
 #search-input-icon {
-	position: relative;
+  position: relative;
   margin-right: 2%;
 }
 #search-input-icon:before {
-	position: absolute;
-	right: 0;
-	bottom: 15px;
-	width: 20px;
-	height: 20px;
-	content: '';
-	cursor: default;
-	background: url('../graphics/search_icon.png') no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  width: 20px;
+  height: 20px;
+  content: '';
+  cursor: default;
+  background: url('../graphics/search_icon.png') no-repeat;
 }
 #search-input-icon.empty:before {
-	cursor: pointer;
-	background-image: url('../graphics/delete_icon.png');
+  cursor: pointer;
+  background-image: url('../graphics/delete_icon.png');
 }
 
 .btn-flat {
@@ -109,47 +109,47 @@ input.search {
 }
 
 #pagination {
-	margin-top: 60px;
+  margin-top: 60px;
 }
 #pagination ul {
-	font-size: 0;
-	list-style-type: none;
-	text-align: center;
+  font-size: 0;
+  list-style-type: none;
+  text-align: center;
 }
 #pagination li {
-	font-size: 14px;
-	display: inline;
+  font-size: 14px;
+  display: inline;
 }
 #pagination a {
-	padding: 8px 12px;
-	text-decoration: none;
-	color: #000;
-	border: 1px solid #eee;
-	border-right: none;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #eee;
+  border-right: none;
 }
 #pagination a:hover {
-	background: #f5f5f5;
+  background: #f5f5f5;
 }
 #pagination li:first-child a {
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 #pagination li:last-child a {
-	border-right: 1px solid #eee;
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
+  border-right: 1px solid #eee;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 #pagination li.active a {
-	color: white;
-	border-color: #ed5565;
-	background: #ed5565;
+  color: white;
+  border-color: #ed5565;
+  background: #ed5565;
 }
 #pagination li.active a:hover {
-	cursor: default;
+  cursor: default;
 }
 #pagination li.disabled a {
-	cursor: not-allowed;
+  cursor: not-allowed;
 }
 #pagination li.disabled a:hover {
-	background: none;
+  background: none;
 }
