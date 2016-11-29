@@ -8,7 +8,7 @@ var ghPages = require('gulp-gh-pages');
 gulp.task('deploy', function() {
     return gulp.src('./public/**/*')
         .pipe(ghPages({
-            branch: "master"
+            branch: "gh-pages"
         }));
 });
 
