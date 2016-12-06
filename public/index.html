@@ -108,7 +108,17 @@
       </div>
       <div class="hit-content">
         <h3 class="hit-name">{{{ _highlightResult.name.value }}}</h3>
-        <p><span class="hit-review">{{ stars_count }}</span> <span class="hit-review-count">({{ reviews_count }})</span><p>
+        <p>
+          <span class="hit-review">{{ stars_count }}</span>
+          <span class="stars-count">
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+          </span>
+          <span class="hit-review-count">({{ reviews_count }} reviews)</span>
+        <p>
         <p><span class="hit-food-type">{{ food_type }}</span> | <span class="hit-neighborhood">{{ neighborhood }}</span> | <span class="hit-price">{{ price }}</span></p>
       </div>
     </div>

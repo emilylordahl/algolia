@@ -6,8 +6,7 @@ $(function () {
 function init(){
   var APPLICATION_ID = "NDZ5QKFC98";
   var SEARCH_ONLY_API_KEY = "8c2d9b98bdaf5198f785847fefc2684e";
-  var INDEX_ONE = "restaurants";
-  var INDEX_TWO = "csv_restaurants";
+  var INDEX_ONE = "restaurant_data";
   var PARAMS = {
     hitsPerPage: 3,
     maxValuesPerFacet: 8,
@@ -91,6 +90,28 @@ function init(){
     $stats.html(statsHtml);
   }
 
+
+  function renderStarsCount(content){
+    var $starsCount = $(".stars-count");
+    for (var i = 0; i < content.hits.length; i++) {
+      var starsCount = parseInt(content.hits[i].stars_count);
+      if (starsCount === 0) {
+        $starsCount.removeClass().addClass("zero-stars", "stars-count");
+      } else if (starsCount === 1) {
+        $starsCount.removeClass().addClass("one-star", "stars-count");
+      } else if (starsCount === 2) {
+        $starsCount.removeClass().addClass("two-stars", "stars-count");
+      } else if (starsCount === 3) {
+        $starsCount.removeClass().addClass("three-stars", "stars-count");
+      } else if (starsCount === 4) {
+        $starsCount.removeClass().addClass("four-stars", "stars-count");
+      } else if (starsCount === 5) {
+        $starsCount.removeClass().addClass("five-stars", "stars-count");
+      }
+    }
+
+
+  }
   // function renderMore(content) {
   //   console.log(content.page);
   //   var pages = [];
