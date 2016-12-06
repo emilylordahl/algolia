@@ -6,8 +6,7 @@ $(function () {
 function init(){
   var APPLICATION_ID = "NDZ5QKFC98";
   var SEARCH_ONLY_API_KEY = "8c2d9b98bdaf5198f785847fefc2684e";
-  var INDEX_ONE = "restaurants";
-  var INDEX_TWO = "csv_restaurants";
+  var INDEX_ONE = "restaurant_data";
   var PARAMS = {
     hitsPerPage: 3,
     maxValuesPerFacet: 8,

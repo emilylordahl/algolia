@@ -8,8 +8,8 @@ var algoliasearch = require('algoliasearch');
 var appID = process.env.ALGOLIA_APP_ID;
 var apiKey = process.env.ALGOLIA_API_KEY;
 var client = algoliasearch(appID, apiKey);
-var index = client.initIndex('restaurants');
-var restaurantsJSON = require('./resources/dataset/restaurants_list.json');
+var index = client.initIndex('restaurant_data');
+var restaurantsJSON = require('./resources/dataset/restaurant_list.json');
 
 if (process.env.NODE_ENV !== 'test') {
   app.use(logger('dev'));
@@ -25,7 +25,7 @@ index.addObjects(restaurantsJSON, function(err, content){
   }
 });
 
-index.setSettings({"attributesToIndex":["name", "price"]});
+index.setSettings({"attributesToIndex":["food_type"]});
 
 app.listen(process.env.PORT || 3000, function(){
   console.log('Server running on port 3000...');
