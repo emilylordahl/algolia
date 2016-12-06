@@ -61,13 +61,12 @@ input.search {
 
 .hit {
   display: block;
-  margin-bottom: 2rem;
-  height: 100px;
+  margin-bottom: 2rem!important;
 }
 
 .hit h3 {
   color: #000000!important;
-  font-size: 1rem!important;
+  font-size: 1.25rem!important;
 }
 
 .hit-image img {
@@ -76,6 +75,15 @@ input.search {
   margin-right: 5%;
   border-radius: 3px;
   border: 1px solid lightgray;
+}
+
+.hit-review + .stars-count {
+  vertical-align: text-top;
+  margin: 0 5px;
+}
+
+.hit-review {
+  color: #FFAB66;
 }
 
 #search-input-icon {
@@ -106,6 +114,12 @@ input.search {
 .show-more-btn {
   border: 1px solid lightgray!important;
   .text-transform: none!important;
+}
+
+.hit p {
+  color: #B3B3B3!important;
+  margin: .3625rem 0!important;
+  font-size: 1rem!important;
 }
 
 #pagination {

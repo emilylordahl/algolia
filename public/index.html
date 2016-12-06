@@ -29,48 +29,60 @@
         <div class="facet-nav all-pad">
           <p>Rating</p>
           <ul class="half-lr-pad stars-container">
-            <li class="zero-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="one-star">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="two-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="three-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="four-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="five-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
+            <a class="stars-count-zero" href="#">
+              <li class="zero-stars">
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+              </li>
+            </a>
+            <a class="stars-count-one" href="#">
+              <li class="one-star">
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+              </li>
+            </a>
+            <a class="stars-count-two" href="#">
+              <li class="two-stars">
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+              </li>
+            </a>
+            <a class="stars-count-three" href="#">
+              <li class="three-stars">
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+              </li>
+            </a>
+            <a class="stars-count-four" href="#">
+              <li class="four-stars">
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+              </li>
+            </a>
+            <a class="stars-count-five" href="#">
+              <li class="five-stars">
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+                <i class="x-small material-icons">grade</i>
+              </li>
+            </a>
           </ul>
         </div>
         <div class="facet-nav all-pad">
@@ -108,8 +120,18 @@
       </div>
       <div class="hit-content">
         <h3 class="hit-name">{{{ _highlightResult.name.value }}}</h3>
-        <p><span class="hit-review">{{ stars_count }}</span> <span class="hit-review-count">({{ reviews_count }})</span><p>
-        <p><span class="hit-food-type">{{ food_type }}</span> | <span class="hit-neighborhood">{{ neighborhood }}</span> | <span class="hit-price">{{ price }}</span></p>
+        <p>
+          <span class="hit-review">{{ stars_count }}</span>
+          <span class="stars-count">
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+            <i class="x-small material-icons">grade</i>
+          </span>
+          <span class="hit-review-count">({{ reviews_count }} reviews)</span>
+        <p>
+        <p><span class="hit-food-type">{{ food_type }}</span> | <span class="hit-neighborhood">{{ neighborhood }}</span> | <span class="hit-price">{{ price_range }}</span></p>
       </div>
     </div>
     {{/each}}

@@ -64,10 +64,7 @@ function init(){
   algoliaHelper.on("result", function(content, state) {
     renderStats(content);
     renderHits(content);
-    for (var i = 0; i < content.hits.length; i++) {
-      var objectID = content.hits[i].objectID;
-      console.log(objectID);
-    }
+    renderStarsCount(content);
   });
 
   function renderHits(content) {
@@ -88,6 +85,28 @@ function init(){
 
     var statsHtml = statsTmplte(content);
     $stats.html(statsHtml);
+  }
+
+  function renderStarsCount(content){
+    var $starsCount = $(".stars-count");
+    for (var i = 0; i < content.hits.length; i++) {
+      var starsCount = parseInt(content.hits[i].stars_count);
+      if (starsCount === 0) {
+        $starsCount.removeClass().addClass("zero-stars", "stars-count");
+      } else if (starsCount === 1) {
+        $starsCount.removeClass().addClass("one-star", "stars-count");
+      } else if (starsCount === 2) {
+        $starsCount.removeClass().addClass("two-stars", "stars-count");
+      } else if (starsCount === 3) {
+        $starsCount.removeClass().addClass("three-stars", "stars-count");
+      } else if (starsCount === 4) {
+        $starsCount.removeClass().addClass("four-stars", "stars-count");
+      } else if (starsCount === 5) {
+        $starsCount.removeClass().addClass("five-stars", "stars-count");
+      }
+    }
+
+
   }
 
   // function renderMore(content) {
