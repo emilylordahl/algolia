@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'test') {
   app.use(logger('dev'));
 }
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/docs'));
 
 // Per docs, "it's better to do a setSettings before pushing the data"
 index.setSettings({
