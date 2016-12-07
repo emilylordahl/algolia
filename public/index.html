@@ -22,67 +22,12 @@
         </div>
       </div>
       <div class="col s12 m4 l3">
-        <div class="facet-nav all-pad">
-          <p>Cuisine/Food Type</p>
-          <ul class="half-lr-pad cuisine-container"></ul>
-        </div>
-        <div class="facet-nav all-pad">
-          <p>Rating</p>
-          <ul class="half-lr-pad stars-container">
-            <li class="zero-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="one-star">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="two-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="three-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="four-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-            <li class="five-stars">
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-              <i class="x-small material-icons">grade</i>
-            </li>
-          </ul>
-        </div>
-        <div class="facet-nav all-pad">
-          <p>Payment Options</p>
-          <ul class="half-lr-pad payment-container">
-          </ul>
-        </div>
+        <div id="facets"></div>
       </div>
       <div class="col s12 m8 l9">
         <div class="stats all-pad no-bottom-pad"></div>
         <div class="hits all-pad no-top-pad"></div>
-        <div id="pagination"></div>
+        <!-- <div id="pagination"></div> -->
       </div>
     </div>
   </div>
@@ -140,6 +85,21 @@
       <li {{^next_page}}class="disabled"{{/next_page}}><a href="#" {{#next_page}}class="go-to-page" data-page="{{ next_page }}"{{/next_page}}>&#62;</a></li>
     </ul>
   </script>
+
+  <script type="text/template" id="facets-template">
+    <div class="facet lr-pad">
+      <p>{{title}}</p>
+      <ul>
+        {{#values}}
+        <li>
+          <a href="" class="facet-link toggle-refine" data-facet="{{ facet }}" data-value="{{ name }}">
+            {{ name }}<span class="facet-count"> ({{ count }})</span>
+          </a>
+        </li>
+        {{/values}}
+      </ul>
+    </div>
+</script>
 </body>
 
 </html>
