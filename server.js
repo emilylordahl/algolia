@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Per docs, "it's better to do a setSettings before pushing the data"
 index.setSettings({"attributesToIndex":["name", "food_type", "city", "neighborhood"]});
-index.setSettings({"customRanking":["desc(reviews_count)", "desc(stars_count)"]});
+index.setSettings({"customRanking":[parseInt("desc(reviews_count)"), parseInt("desc(stars_count)")]});
 
 index.addObjects(restaurantsJSON, function(err, content){
   if (err) {

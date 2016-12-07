@@ -10,7 +10,8 @@ function init(){
   var PARAMS = {
     hitsPerPage: 3,
     maxValuesPerFacet: 8,
-    index: INDEX_ONE
+    index: INDEX_ONE,
+    aroundLatLngViaIP: true
   };
 
   var algolia = algoliasearch(APPLICATION_ID, SEARCH_ONLY_API_KEY);
@@ -64,10 +65,7 @@ function init(){
   algoliaHelper.on("result", function(content, state) {
     renderStats(content);
     renderHits(content);
-    for (var i = 0; i < content.hits.length; i++) {
-      var objectID = content.hits[i].objectID;
-      console.log(objectID);
-    }
+    renderStarsCount(content);
   });
 
   function renderHits(content) {
